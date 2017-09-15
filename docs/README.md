@@ -162,7 +162,7 @@ Python – отличный язык программирования. Он пр
     static PyMethodDef SteroidMethods[] = //Массив структур PyMethodDef с постоянным адресом
     {
     	{"system",  steroid_system, METH_VARARGS, "Executes a shell command."},
-    	{"convert",  steroid_convert, METH_VARARGS, "Converts a number between notation systems defined with decimal     numbers as bases"},
+    	{"convert",  steroid_convert, METH_VARARGS, "Converts a number between notation systems defined with decimal numbers as bases"},
     	{NULL, NULL, 0, NULL}
     };
 
@@ -191,7 +191,9 @@ Python – отличный язык программирования. Он пр
     	PyModuleDef_HEAD_INIT, //Запускаем макроблок
     	"steroid", //Имя модуля
     	NULL, //Строка описания модуля (сейчас задана равной NULL)
-    	-1, //Размер данных, хранимых модулем в адресном пространстве конкретного интерпретатора. -1 означает, что все данные о состоянии модуля в целом будут сохранены в глобальных переменных и недоступны из Python
+    	-1, //Размер данных, хранимых модулем в адресном пространстве 
+        конкретного интерпретатора. -1 означает, что все данные о состоянии 
+        модуля в целом будут сохранены в глобальных переменных и недоступны из Python
        	SteroidMethods //Ранее созданная структура, содержащая описание экспортируемых функций
     };
 
